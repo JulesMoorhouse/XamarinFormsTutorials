@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zeK/HJQJnAxvV/6joXTuKTuAgrMo2pKd5niru5Kpm+XI8HLUOif00/7Owy+9tutz55FwIgdg0Nlkh7wLLcMB4Q==",
+  "success": true,
+  "projectFilePath": "/Users/jm/repos/testcode/tutorials/Phoneword/Phoneword.iOS/Phoneword.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/jm/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/jm/.nuget/packages/xamarin.forms/4.6.0.1141/xamarin.forms.4.6.0.1141.nupkg.sha512"
+  ],
+  "logs": []
+}
