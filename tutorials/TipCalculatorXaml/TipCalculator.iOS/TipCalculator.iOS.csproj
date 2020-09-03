@@ -122,12 +122,12 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.62955-pre2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\TipCalculator\TipCalculator.csproj">
-      <Project>{ED1B8764-D6F2-4F0B-AFE7-5846B91CC742}</Project>
+      <Project>{FCEADAD5-48E1-4A3D-92C7-BD5C37ED0B25}</Project>
       <Name>TipCalculator</Name>
     </ProjectReference>
   </ItemGroup>

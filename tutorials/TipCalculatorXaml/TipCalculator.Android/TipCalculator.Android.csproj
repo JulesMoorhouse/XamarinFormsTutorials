@@ -15,8 +15,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -50,12 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.62955-pre2" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -94,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TipCalculator\TipCalculator.csproj">
-      <Project>{ED1B8764-D6F2-4F0B-AFE7-5846B91CC742}</Project>
+      <Project>{FCEADAD5-48E1-4A3D-92C7-BD5C37ED0B25}</Project>
       <Name>TipCalculator</Name>
     </ProjectReference>
   </ItemGroup>
