@@ -130,11 +130,20 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Astronomy\Astronomy.csproj">
-      <Project>{08D73E27-08FB-4257-A78B-FCCC752EF39D}</Project>
+      <Project>{587AD52F-E861-4359-93F9-0B5013BFE4A0}</Project>
       <Name>Astronomy</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\starfield.png" />
+    <BundleResource Include="Resources\moon.png" />
+    <BundleResource Include="Resources\moon%402x.png" />
+    <BundleResource Include="Resources\moon%403x.png" />
+    <BundleResource Include="Resources\question.png" />
+    <BundleResource Include="Resources\question%402x.png" />
+    <BundleResource Include="Resources\question%403x.png" />
+    <BundleResource Include="Resources\sun.png" />
+    <BundleResource Include="Resources\sun%402x.png" />
+    <BundleResource Include="Resources\sun%403x.png" />
   </ItemGroup>
 </Project>
