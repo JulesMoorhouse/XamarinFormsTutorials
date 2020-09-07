@@ -24,4 +24,9 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\..\Downloads\mslearn-xamarin-store-data-sqlite-master\src\exercise1\assets\PersonRepository.cs">
+      <Link>PersonRepository.cs</Link>
+    </Compile>
+  </ItemGroup>
 </Project>
