@@ -17,15 +17,17 @@ public class DescisionStructures
         {
             JOptionPane.showMessageDialog(null, "The number is exactly 5!");
         }
-
-        if (number > 5)
+        else if (number > 10)
+        {
+            JOptionPane.showMessageDialog(null, "The number is greater than 10!");
+        }
+        else if (number > 5)
         {
             JOptionPane.showMessageDialog(null, "The number is greater than 5!");
         }
-
-        if (number > 10)
+        else
         {
-            JOptionPane.showMessageDialog(null, "The number is greater than 10!");
+            JOptionPane.showMessageDialog(null, "The number is less than 5!");
         }
 
         System.exit(0); // Better to use exit when using JOptionPane as it's faster
