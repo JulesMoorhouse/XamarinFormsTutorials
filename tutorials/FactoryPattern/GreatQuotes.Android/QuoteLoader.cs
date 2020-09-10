@@ -8,7 +8,7 @@ using GreatQuotes.ViewModels;
 
 namespace GreatQuotes
 {
-    public class QuoteLoader
+    public class QuoteLoader : IQuoteLoader
     {
         const string FileName = "quotes.xml";
 

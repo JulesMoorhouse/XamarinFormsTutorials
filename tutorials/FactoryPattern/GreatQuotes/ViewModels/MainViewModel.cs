@@ -5,11 +5,12 @@ namespace GreatQuotes.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        readonly Action saveQuotes;
+        private readonly QuoteManager quoteManager;
 
-        public MainViewModel(Action save)
+        public MainViewModel()
         {
-            saveQuotes = save;
+            quoteManager = QuoteManager.Instance;
+            Quotes = quoteManager.Quotes as ObservableCollection<GreatQuoteViewModel>;
         }
 
         public ObservableCollection<GreatQuoteViewModel> Quotes { get; set; }
@@ -18,7 +19,7 @@ namespace GreatQuotes.ViewModels
 
         public void SaveQuotes()
         {
-            saveQuotes?.Invoke();
+            quoteManager.Save();
         }
     }
 }

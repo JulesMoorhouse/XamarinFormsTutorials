@@ -22,13 +22,9 @@ namespace GreatQuotes.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            var quoteLoader = new QuoteLoader();
-            GreatQuotesViewModel = new MainViewModel(() => quoteLoader.Save(GreatQuotesViewModel.Quotes))
-            {
-                Quotes = new ObservableCollection<GreatQuoteViewModel>(quoteLoader.Load())
-            };
+            QuoteLoaderFactory.Create = () => new QuoteLoader();
 
-            var app = new App(GreatQuotesViewModel);
+            var app = new App();
             LoadApplication(app);
         }
 
