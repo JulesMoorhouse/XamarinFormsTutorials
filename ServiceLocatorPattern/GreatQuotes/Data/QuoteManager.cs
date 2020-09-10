@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using GreatQuotes.ViewModels;
 
-namespace GreatQuotes.Data {
-    public class QuoteManager {
+namespace GreatQuotes.Data
+{
+    public class QuoteManager
+    {
 
         static readonly Lazy<QuoteManager> instance = new Lazy<QuoteManager>(() => new QuoteManager());
 
@@ -14,12 +16,14 @@ namespace GreatQuotes.Data {
 
         public IList<GreatQuoteViewModel> Quotes { get; set; }
 
-        private QuoteManager() {
+        private QuoteManager()
+        {
             loader = QuoteLoaderFactory.Create();
             Quotes = new ObservableCollection<GreatQuoteViewModel>(loader.Load());
         }
 
-        public void Save() {
+        public void Save()
+        {
             loader.Save(Quotes);
         }
     }
