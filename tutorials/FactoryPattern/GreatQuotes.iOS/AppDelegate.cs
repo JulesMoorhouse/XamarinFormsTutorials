@@ -7,7 +7,8 @@ using Foundation;
 using GreatQuotes.ViewModels;
 using UIKit;
 
-namespace GreatQuotes.iOS {
+namespace GreatQuotes.iOS
+{
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
@@ -26,7 +27,8 @@ namespace GreatQuotes.iOS {
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
             var quoteLoader = new QuoteLoader();
-            GreatQuotesViewModel = new MainViewModel(() => quoteLoader.Save(GreatQuotesViewModel.Quotes)) {
+            GreatQuotesViewModel = new MainViewModel(() => quoteLoader.Save(GreatQuotesViewModel.Quotes))
+            {
                 Quotes = new ObservableCollection<GreatQuoteViewModel>(quoteLoader.Load())
             };
 

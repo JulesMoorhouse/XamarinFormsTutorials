@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 
-namespace GreatQuotes.ViewModels {
-    public class MainViewModel : BaseViewModel {
+namespace GreatQuotes.ViewModels
+{
+    public class MainViewModel : BaseViewModel
+    {
         readonly Action saveQuotes;
 
-        public MainViewModel(Action save) {
+        public MainViewModel(Action save)
+        {
             saveQuotes = save;
         }
 
@@ -13,7 +16,8 @@ namespace GreatQuotes.ViewModels {
 
         public GreatQuoteViewModel ItemSelected { get; set; }
 
-        public void SaveQuotes() {
+        public void SaveQuotes()
+        {
             saveQuotes?.Invoke();
         }
     }

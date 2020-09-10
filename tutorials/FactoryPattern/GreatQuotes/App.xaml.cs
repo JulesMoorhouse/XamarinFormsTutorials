@@ -14,7 +14,7 @@ namespace GreatQuotes
         {
             InitializeComponent();
             GreatQuotesViewModel = greatQuotes;
-            MainPage = new NavigationPage (new QuoteListPage());
+            MainPage = new NavigationPage(new QuoteListPage());
         }
 
         protected override void OnStart()

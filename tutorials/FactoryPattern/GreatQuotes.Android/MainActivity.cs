@@ -5,7 +5,8 @@ using Android.OS;
 using GreatQuotes.ViewModels;
 using System.Collections.ObjectModel;
 
-namespace GreatQuotes.Droid {
+namespace GreatQuotes.Droid
+{
     [Activity(Label = "@string/app_name", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
@@ -22,7 +23,8 @@ namespace GreatQuotes.Droid {
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             var quoteLoader = new QuoteLoader();
-            GreatQuotesViewModel = new MainViewModel(() => quoteLoader.Save(GreatQuotesViewModel.Quotes)) {
+            GreatQuotesViewModel = new MainViewModel(() => quoteLoader.Save(GreatQuotesViewModel.Quotes))
+            {
                 Quotes = new ObservableCollection<GreatQuoteViewModel>(quoteLoader.Load())
             };
 

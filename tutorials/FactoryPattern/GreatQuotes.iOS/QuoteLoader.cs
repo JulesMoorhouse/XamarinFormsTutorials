@@ -6,29 +6,38 @@ using System.Xml.Linq;
 using GreatQuotes.Data;
 using GreatQuotes.ViewModels;
 
-namespace GreatQuotes.iOS {
-    public class QuoteLoader {
+namespace GreatQuotes.iOS
+{
+    public class QuoteLoader
+    {
         const string FileName = "quotes.xml";
 
-        public IEnumerable<GreatQuoteViewModel> Load() {
+        public IEnumerable<GreatQuoteViewModel> Load()
+        {
             XDocument doc = null;
 
             string filename = Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                 "..", "Library", FileName);
 
-            if (File.Exists(filename)) {
-                try {
+            if (File.Exists(filename))
+            {
+                try
+                {
                     doc = XDocument.Load(filename);
-                } catch {
+                }
+                catch
+                {
                 }
             }
 
             if (doc == null)
                 doc = XDocument.Parse(DefaultData);
 
-            if (doc.Root != null) {
-                foreach (var entry in doc.Root.Elements("quote")) {
+            if (doc.Root != null)
+            {
+                foreach (var entry in doc.Root.Elements("quote"))
+                {
                     yield return new GreatQuoteViewModel(new GreatQuote(
                         entry.Attribute("author").Value,
                         entry.Value));
@@ -36,7 +45,8 @@ namespace GreatQuotes.iOS {
             }
         }
 
-        public void Save(IEnumerable<GreatQuoteViewModel> quotes) {
+        public void Save(IEnumerable<GreatQuoteViewModel> quotes)
+        {
             string filename = Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                 "..", "Library", FileName);
@@ -47,7 +57,8 @@ namespace GreatQuotes.iOS {
             XDocument doc = new XDocument(
                 new XElement("quotes",
                     quotes.Select(q =>
-                        new XElement("quote", new XAttribute("author", q.Author)) {
+                        new XElement("quote", new XAttribute("author", q.Author))
+                        {
                             Value = q.QuoteText
                         })));
 
