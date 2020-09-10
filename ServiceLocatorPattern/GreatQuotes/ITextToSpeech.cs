@@ -1,10 +1,8 @@
 ﻿using System;
 namespace GreatQuotes
 {
-    public class ITextToSpeech
+    public interface ITextToSpeech
     {
-        public ITextToSpeech()
-        {
-        }
+        void Speak(string text);
     }
 }
