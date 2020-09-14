@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using FlagFacts.Extensions;
 using System;
 using System.Collections;
+using Xamarin.Essentials;
 
 namespace FlagFacts
 {
@@ -56,7 +57,7 @@ namespace FlagFacts
 
         private void OnMoreInformation(object sender, EventArgs e)
         {
-            Device.OpenUri(CurrentFlag.MoreInformationUrl);
+            Launcher.OpenAsync(CurrentFlag.MoreInformationUrl);
         }
 
         private void OnPrevious(object sender, EventArgs e)
