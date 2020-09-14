@@ -1,8 +1,0 @@
-/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagData/bin/Debug/netstandard2.0/FlagData.deps.json
-/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagData/bin/Debug/netstandard2.0/FlagData.dll
-/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagData/bin/Debug/netstandard2.0/FlagData.pdb
-/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagData/obj/Debug/netstandard2.0/FlagData.AssemblyInfoInputs.cache
-/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagData/obj/Debug/netstandard2.0/FlagData.AssemblyInfo.cs
-/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagData/obj/Debug/netstandard2.0/FlagData.csproj.CoreCompileInputs.cache
-/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagData/obj/Debug/netstandard2.0/FlagData.dll
-/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagData/obj/Debug/netstandard2.0/FlagData.pdb
