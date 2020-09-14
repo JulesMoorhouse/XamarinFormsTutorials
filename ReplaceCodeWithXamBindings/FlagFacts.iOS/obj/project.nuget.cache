@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "bwCt5op04DLWDvilbszgWZWvJQN1vPzHEYRlkmZjRc0QT57eJKAfRBMfBXoe7TI7ORMtPHbIA3rcVQfHirlyKw==",
+  "success": true,
+  "projectFilePath": "/Users/jm/repos/XamarinTurorials/ReplaceCodeWithXamBindings/FlagFacts.iOS/FlagFacts.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/jm/.nuget/packages/xamarin.forms/4.0.0.62955-pre2/xamarin.forms.4.0.0.62955-pre2.nupkg.sha512",
+    "/Users/jm/.nuget/packages/xamarin.ios.materialcomponents/60.1.0/xamarin.ios.materialcomponents.60.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
