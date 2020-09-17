@@ -33,14 +33,14 @@
             <Picker x:Name="country" SelectedItem="{Binding Country}" />
 
             <Label Text="Current Design was Adopted on" FontAttributes="Bold" />
-            <DatePicker x:Name="adopted" MinimumDate="01/01/1700" HorizontalOptions="Start"
+            <DatePicker MinimumDate="01/01/1700" HorizontalOptions="Start"
                         Date="{Binding DateAdopted}"/>
 
             <Label Text="Has Shield" FontAttributes="Bold" />
-            <Switch x:Name="hasShield" IsToggled="{Binding IncludesShield}" />
+            <Switch IsToggled="{Binding IncludesShield}" />
 
             <Label Text="Fun Fact" FontAttributes="Bold" />
-            <Label x:Name="description" Text="{Binding Description}" />
+            <Label Text="{Binding Description}" />
 
             <Label x:Name="moreInfo" Text="More Information" Margin="0,0,10,0"
                     TextColor="Blue" HorizontalOptions="End">
