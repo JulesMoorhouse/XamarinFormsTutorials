@@ -8,11 +8,11 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Previous"
-                     Clicked="OnPrevious" Icon="ic_arrow_drop_up_black.png" />
+                     Clicked="OnPrevious" />
         <ToolbarItem Text="Next" 
-                     Clicked="OnNext" Icon="ic_arrow_drop_down_black.png" />
+                     Clicked="OnNext" />
         <ToolbarItem Text="Show" 
-                     Clicked="OnShow" Icon="ic_action_search.png" />
+                     Clicked="OnShow"/>
     </ContentPage.ToolbarItems>
 
     <ScrollView>

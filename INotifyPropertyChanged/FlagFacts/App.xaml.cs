@@ -11,6 +11,7 @@ namespace FlagFacts
             InitializeComponent();
 
             MainPage = MainPage = new NavigationPage(new MainPage());
+            ((NavigationPage)MainPage).BarTextColor = Color.Black;
         }
 
         protected override void OnStart()
