@@ -40,7 +40,6 @@ namespace FlagFacts
             //country.SetBinding(Picker.SelectedIndexProperty,
             //    new Binding(nameof(CurrentFlag.Country)));
 
-            flagImage.Source = CurrentFlag.GetImageSource();
 
             //adopted.Date = CurrentFlag.DateAdopted;
             //adopted.DateSelected += (s, e) => CurrentFlag.DateAdopted = e.NewDate;
