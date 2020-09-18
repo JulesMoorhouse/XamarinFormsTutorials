@@ -42,7 +42,6 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <IntermediateOutputPath></IntermediateOutputPath>
-    <EnableLLVM>false</EnableLLVM>
     <AndroidSupportedAbis></AndroidSupportedAbis>
     <AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
