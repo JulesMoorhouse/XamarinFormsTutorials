@@ -3,10 +3,30 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="FlagFacts.AllFlagsPage"
+    xmlns:cvt="clr-namespace:FunFlacts.Converters"
+    xmlns:data="clr-namespace:FlagData;assembly=FlagData"
     Title="Fun with Flags">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <cvt:EmbeddedImageConverter x:Key="irConverter" 
+                    ResolvingAssemblyType="{x:Type data:Flag}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <ListView ItemsSource="{Binding Flags}"
               SelectedItem="{Binding CurrentFlag, Mode=TwoWay}"
-              ItemTapped="ListView_ItemTapped"/>
+              ItemTapped="ListView_ItemTapped">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ImageCell DetailColor="Gray"
+                           ImageSource="{Binding ImageUrl, Converter={StaticResource irConverter}}"
+                           Text="{Binding Country}"
+                           Detail="{Binding DateAdopted, StringFormat='Adopted on {0:d}'}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
 
 </ContentPage>
