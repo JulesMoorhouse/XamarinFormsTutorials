@@ -13,7 +13,4 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="ViewCells\DoorBellViewCell.xaml.cs" />
-  </ItemGroup>
 </Project>
