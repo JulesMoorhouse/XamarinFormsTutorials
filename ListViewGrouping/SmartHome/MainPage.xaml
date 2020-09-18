@@ -13,6 +13,8 @@
 
     <ListView ItemsSource="{Binding .}" 
         ItemTemplate="{StaticResource DeviceSelector}" 
-        HasUnevenRows="True" />
+        HasUnevenRows="True"
+        IsGroupingEnabled="True"
+        GroupDisplayBinding="{Binding Key}"/>
 
 </ContentPage>

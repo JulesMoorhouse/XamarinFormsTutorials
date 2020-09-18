@@ -1,3 +1,4 @@
+using System.Linq;
 using Xamarin.Forms;
 
 namespace SmartHome
@@ -8,7 +9,9 @@ namespace SmartHome
         {
             InitializeComponent();
 
-            BindingContext = DeviceManager.Instance.Value.Devices;
+            BindingContext = DeviceManager.Instance.Value.Devices
+                .OrderBy(d => d.Name)
+                .ToLookup(d => d.Name[0].ToString());
         }
     }
 }
