@@ -10,6 +10,19 @@ namespace GreatQuotes.ViewModels
     {
         public IList<QuoteViewModel> Quotes { get; private set; }
 
+        private QuoteViewModel selectedQuote;
+        public QuoteViewModel SelectedQuote
+        {
+            get
+            {
+                return selectedQuote;
+            }
+            set
+            {
+                SetPropertyValue(ref selectedQuote, value);
+            }
+        }
+
         public MainViewModel()
         {
             Quotes = new ObservableCollection<QuoteViewModel>(

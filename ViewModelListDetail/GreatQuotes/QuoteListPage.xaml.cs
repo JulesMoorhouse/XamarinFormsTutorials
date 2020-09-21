@@ -13,8 +13,7 @@ namespace GreatQuotes
 
         void OnQuoteSelected(object sender, ItemTappedEventArgs e)
         {
-            QuoteViewModel quote = (QuoteViewModel)e.Item;
-            Navigation.PushAsync(new QuoteDetailPage(quote), true);
+            Navigation.PushAsync(new QuoteDetailPage(), true);
         }
     }
 }

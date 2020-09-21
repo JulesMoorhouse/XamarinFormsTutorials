@@ -5,9 +5,13 @@ namespace GreatQuotes
 {
     public partial class QuoteDetailPage : ContentPage
     {
-        public QuoteDetailPage(QuoteViewModel quote)
+        public QuoteDetailPage()
         {
-            BindingContext = quote;
+            // Remember that the view model is a singleton that's exposed by the App class.
+            BindingContext = App.MainViewModel.SelectedQuote;
+
+            // This clears the ListView selection.
+            App.MainViewModel.SelectedQuote = null;
             InitializeComponent();
         }
     }
