@@ -5,8 +5,13 @@
              x:Class="XFDraw.MainPage"
              Title="XFDraw">
 
-    <Grid x:Name="mainLayout" Padding="0">
-        <Label Text="Microsoft Learn" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,10" />
+    <Grid x:Name="mainLayout"
+          Padding="0">
+
+        <local:ShadowedLabel Text="Microsoft Learn"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               Margin="0,0,0,10" />
     </Grid>
 
 
