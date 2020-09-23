@@ -20,6 +20,7 @@
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <JavaOptions></JavaOptions>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,8 +34,6 @@
     <DocumentationFile></DocumentationFile>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidUseSharedRuntime></AndroidUseSharedRuntime>
-    <BundleAssemblies></BundleAssemblies>
-    <JavaOptions></JavaOptions>
     <AndroidKeyStore></AndroidKeyStore>
     <AndroidSigningKeyStore></AndroidSigningKeyStore>
     <AndroidKeyStore></AndroidKeyStore>
