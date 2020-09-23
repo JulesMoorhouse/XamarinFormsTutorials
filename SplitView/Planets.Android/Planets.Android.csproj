@@ -40,7 +40,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AssemblyName></AssemblyName>
     <NoWarn></NoWarn>
   </PropertyGroup>
   <ItemGroup>

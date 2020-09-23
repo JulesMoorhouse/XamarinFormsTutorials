@@ -10,7 +10,7 @@ namespace Planets
         {
             InitializeComponent();
 
-            MainPage = new PlanetsMasterPage();
+            MainPage = new PlanetsMasterDetail();
         }
 
         protected override void OnStart()
