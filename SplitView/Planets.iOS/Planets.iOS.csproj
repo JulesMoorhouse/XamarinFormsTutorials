@@ -124,13 +124,13 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Planets\Planets.csproj">
-      <Project>{08D73E27-08FB-4257-A78B-FCCC752EF39D}</Project>
+      <Project>{587AD52F-E861-4359-93F9-0B5013BFE4A0}</Project>
       <Name>Planets</Name>
     </ProjectReference>
   </ItemGroup>
