@@ -8,10 +8,18 @@
     <Grid x:Name="mainLayout"
           Padding="0">
 
-        <local:ShadowedLabel Text="Microsoft Learn"
-               HorizontalOptions="Center"
-               VerticalOptions="End"
-               Margin="0,0,0,10" />
+        <local:SketchView
+            x:Name="sketchView"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            InkColor="Green" />
+
+        <local:ShadowedLabel
+            Text="Microsoft Learn"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            Margin="0,0,0,10" />
+
     </Grid>
 
 

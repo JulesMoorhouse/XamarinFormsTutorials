@@ -35,7 +35,7 @@ namespace XFDraw
 
         private void OnColorClicked()
         {
-
+            sketchView.InkColor = GetRandomColor();
         }
 
         Random rand = new Random();
