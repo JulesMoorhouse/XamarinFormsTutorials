@@ -3,8 +3,10 @@ using Xamarin.Forms;
 
 namespace XFDraw
 {
-    public class SketchView: View
+    public class SketchView: View, ISketchController
     {
+        public event EventHandler SketchUpdated;
+
         public static readonly BindableProperty InkColorProperty =
             BindableProperty.Create(
                 "InkColor",
@@ -16,6 +18,19 @@ namespace XFDraw
         {
             get { return (Color)GetValue(InkColorProperty); }
             set { SetValue(InkColorProperty, value); }
+        }
+
+        public void Clear()
+        {
+            MessagingCenter.Send(this, "Clear");
+        }
+
+        void ISketchController.SendSketchUpdated()
+        {
+            if (SketchUpdated != null)
+            {
+                SketchUpdated(this, EventArgs.Empty);
+            }
         }
     }
 }

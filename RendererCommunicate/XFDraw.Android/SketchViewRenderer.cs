@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using Android.Content;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -24,6 +25,9 @@ namespace XFDraw.Droid
                 var paintView = new PaintView(Android.App.Application.Context);
                 paintView.SetInkColor(this.Element.InkColor.ToAndroid());
                 SetNativeControl(paintView);
+
+                MessagingCenter.Subscribe<SketchView>(this, "Clear", OnMessageClear);
+                paintView.LineDrawn += PaintViewLineDrawn;
             }
         }
 
@@ -35,6 +39,36 @@ namespace XFDraw.Droid
             {
                 Control.SetInkColor(this.Element.InkColor.ToAndroid());
             }
+        }
+
+        void OnMessageClear(SketchView sender)
+        {
+            if (sender == Element)
+            {
+                Control.Clear();
+            }
+        }
+
+        private void PaintViewLineDrawn(object sender, EventArgs e)
+        {
+            var sketchCon = (ISketchController)Element;
+
+            if (sketchCon == null)
+            {
+                return;
+            }
+
+            sketchCon.SendSketchUpdated();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                MessagingCenter.Unsubscribe<SketchView>(this, "Clear");
+            }
+
+            base.Dispose(disposing);
         }
     }
 }

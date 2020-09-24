@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using XFDraw;
@@ -23,6 +24,9 @@ namespace XFDraw.iOS
                 var paintView = new PaintView();
                 paintView.SetInkColor(this.Element.InkColor.ToUIColor());
                 SetNativeControl(paintView);
+
+                MessagingCenter.Subscribe<SketchView>(this, "Clear", OnMessageClear);
+                paintView.LineDrawn += PaintViewLineDrawn;
             }
         }
 
@@ -34,6 +38,36 @@ namespace XFDraw.iOS
             {
                 Control.SetInkColor(this.Element.InkColor.ToUIColor());
             }
+        }
+
+        void OnMessageClear(SketchView sender)
+        {
+            if (sender == Element)
+            {
+                Control.Clear();
+            }
+        }
+
+        private void PaintViewLineDrawn(object sender, EventArgs e)
+        {
+            var sketchCon = (ISketchController)Element;
+
+            if (sketchCon == null)
+            {
+                return;
+            }
+
+            sketchCon.SendSketchUpdated();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                MessagingCenter.Unsubscribe<SketchView>(this, "Clear");
+            }
+
+            base.Dispose(disposing);
         }
     }
 }
