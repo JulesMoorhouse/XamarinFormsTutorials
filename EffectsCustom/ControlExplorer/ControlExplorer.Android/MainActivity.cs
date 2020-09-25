@@ -7,9 +7,10 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
+using ControlExplorer.Droid;
 
-[assembly: ResolutionGroupName("MicrosoftLearn")]
-
+[assembly: ResolutionGroupName("Xamarin")]
+[assembly: ExportEffect(typeof(MyButtonGradientEffect), "ButtonGradientEffect")]
 namespace ControlExplorer.Droid
 {
     [Activity(Label = "ControlExplorer", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

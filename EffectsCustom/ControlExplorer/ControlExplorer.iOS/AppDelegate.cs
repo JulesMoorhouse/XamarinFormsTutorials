@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using ControlExplorer.iOS;
 using Foundation;
 using UIKit;
 using Xamarin.Forms;
 
-[assembly: ResolutionGroupName("MicrosoftLearn")]
+[assembly: ResolutionGroupName("Xamarin")]
+[assembly: ExportEffect(typeof(MyButtonGradientEffect), "ButtonGradientEffect")]
 
 namespace ControlExplorer.iOS
 {

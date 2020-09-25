@@ -71,6 +71,8 @@
     <Compile Include="MyCustomFontEffect.iOS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\Pacifico.ttf" />
+    <Compile Include="Gradient.iOS.cs" />
+    <Compile Include="MyButtonGradientEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

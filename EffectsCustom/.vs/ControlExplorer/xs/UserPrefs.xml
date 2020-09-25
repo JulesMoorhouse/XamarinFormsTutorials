@@ -1,18 +1,27 @@
-﻿<Properties StartupConfiguration="{7B9E5D8D-5136-4987-B41B-1E2A72C3FF51}|Default">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{02770F0B-BB2D-4A70-90B5-6C58C5197BFE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs">
+    <Files>
+      <File FileName="ControlExplorer/ControlExplorer.Android/MyButtonEmptyClass.cs" Line="29" Column="10" />
+      <File FileName="ControlExplorer/ControlExplorer.Android/MainActivity.cs" Line="26" Column="72" />
+      <File FileName="ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" Line="24" Column="1" />
+      <File FileName="ControlExplorer/ControlExplorer.iOS/AppDelegate.cs" Line="14" Column="68" />
+      <File FileName="ControlExplorer/ControlExplorer/ButtonGradientEffect.cs" Line="13" Column="1" />
+      <File FileName="ControlExplorer/ControlExplorer/MainPage.xaml.cs" Line="34" Column="87" />
+      <File FileName="ControlExplorer/ControlExplorer.iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="ControlExplorer/ControlExplorer.iOS/MyCustomFontEffect.iOS.cs" Line="1" Column="1" />
+      <File FileName="ControlExplorer/ControlExplorer.iOS/Gradient.iOS.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ControlExplorer" expanded="True">
-            <Node name="ControlExplorer.Android" expanded="True">
-              <Node name="Assets" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True" />
+            <Node name="ControlExplorer" expanded="True">
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
             <Node name="ControlExplorer.iOS" expanded="True">
               <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True" />
-              <Node name="MyCustomFontEffect.iOS.cs" selected="True" />
+              <Node name="MyButtonGradientEffect.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -21,9 +30,15 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ControlExplorer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ControlExplorer.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8C1D760D-E90D-4E1F-B762-673A7B1BAA5F" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/jm/repos/XamarinTurorials/EffectsCustom/ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" relfile="ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" line="18" column="1" />
+      <Breakpoint file="/Users/jm/repos/XamarinTurorials/EffectsCustom/ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" relfile="ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" line="36" column="1" />
+      <Breakpoint file="/Users/jm/repos/XamarinTurorials/EffectsCustom/ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" relfile="ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" line="28" column="1" />
+      <Breakpoint file="/Users/jm/repos/XamarinTurorials/EffectsCustom/ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" relfile="ControlExplorer/ControlExplorer.iOS/MyButtonGradientEffect.cs" line="24" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
