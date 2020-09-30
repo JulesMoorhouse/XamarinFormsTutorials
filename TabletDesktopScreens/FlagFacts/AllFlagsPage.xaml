@@ -6,7 +6,9 @@
              Title="Fun with Flags"
              x:Class="FlagFacts.AllFlagsPage">
 
-    <dualScreen:TwoPaneView x:Name="twoPaneView">
+    <dualScreen:TwoPaneView x:Name="twoPaneView"
+                            Pane1Length="1*"
+                            Pane2Length="2*"><!--proportional layout 1/3 for list, 2/3 for details-->
         <dualScreen:TwoPaneView.Pane1>
             <!--existing ListView-->
             <ListView ItemsSource="{Binding Flags}"

@@ -10,6 +10,8 @@ namespace FlagFacts
     {
         bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
 
+        bool DeviceIsBigScreen => (Device.Idiom == TargetIdiom.Tablet) || (Device.Idiom == TargetIdiom.Desktop);
+
         // Is not spanned when first viewed...
         bool wasSpanned = false;
 
@@ -39,15 +41,16 @@ namespace FlagFacts
 
         private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            if (!DeviceIsSpanned)
+            if (!DeviceIsSpanned && !DeviceIsBigScreen)
             {
+                // Use Navigation only on phone-size single-screens
                 await this.Navigation.PushAsync(new FlagDetailsPage());
             }
         }
 
         async void UpdateLayouts()
         {
-            if (DeviceIsSpanned)
+            if (DeviceIsSpanned || DeviceIsBigScreen)
             {
                 // Two screens: side by side
                 twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.TopBottom;
