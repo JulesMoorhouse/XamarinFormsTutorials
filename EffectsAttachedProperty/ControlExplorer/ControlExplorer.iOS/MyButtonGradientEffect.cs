@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using CoreAnimation;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -27,13 +28,31 @@ namespace ControlExplorer.iOS
             }
         }
 
+        protected override void OnElementPropertyChanged(PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(e);
+
+            if (Element is Xamarin.Forms.Button == false)
+            {
+                return;
+            }
+
+            if (e.PropertyName == ButtonGradientEffect.GradientColorProperty.PropertyName
+                 || e.PropertyName == VisualElement.BackgroundColorProperty.PropertyName
+                 || e.PropertyName == VisualElement.WidthProperty.PropertyName
+                 || e.PropertyName == VisualElement.HeightProperty.PropertyName)
+            {
+                SetGradient();
+            }
+        }
+
         void SetGradient()
         {
             gradLayer?.RemoveFromSuperLayer();
 
             var xfButton = Element as Button;
             var colourTop = xfButton.BackgroundColor;
-            var colourBottom = Color.Black;
+            var colourBottom = ButtonGradientEffect.GetGradientColor(xfButton);
 
             gradLayer = Gradient.GetGradientLayer(
                 colourTop.ToCGColor(),

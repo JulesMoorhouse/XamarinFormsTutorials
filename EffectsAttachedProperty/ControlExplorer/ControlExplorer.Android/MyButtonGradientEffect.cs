@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using Android.Graphics.Drawables;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -33,12 +34,27 @@ namespace ControlExplorer.Droid
             }
         }
 
+        protected override void OnElementPropertyChanged(PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(e);
+
+            if (Element is Xamarin.Forms.Button == false)
+            {
+                return;
+            }
+
+            if (e.PropertyName == ButtonGradientEffect.GradientColorProperty.PropertyName)
+            {
+                SetGradient();
+            }
+        }
+
         void SetGradient()
         {
             var xfButton = Element as Xamarin.Forms.Button;
 
             var colourTop = xfButton.BackgroundColor;
-            var colourBottom = Xamarin.Forms.Color.Black;
+            var colourBottom = ButtonGradientEffect.GetGradientColor(xfButton);
 
             var drawable = Gradient.GetGradientDrawable(colourTop.ToAndroid(), colourBottom.ToAndroid());
 
